@@ -1,0 +1,126 @@
+x=683
+y=384
+q=0
+b1=28
+b2=250
+b3=0
+d=0
+f=150
+t=0
+b=0
+x1=90
+y1=90
+v=0
+def setup():
+    size(1366,768)
+def draw():
+    global x,y,q,b1,b2,b3,d,f,t,b,x1,y1,v
+    print(q)
+    if q==0:
+        b1=28
+        b2=250
+        b3=0    
+    if q==1:
+        b1=133
+        b2=133
+        b3=133
+    if q==2:
+        b1=170
+        b2=27
+        b3=154
+    if q==3:
+        b1=133
+        b2=133
+        b3=133
+    if q==4:
+        b1=133
+        b2=133
+        b3=133                
+    background(b1,b2,b3)
+    rect(x,y,20,20)
+    fill(0)
+    step=5
+    if d < 4:
+        if keyPressed:
+            if key == 'w':
+                y=y-step
+            if key == 'a':
+                x=x-step    
+            if key == 's':
+                y=y+step        
+            if key == 'd':
+                x=x+step 
+            if keyCode == UP:
+                y=y-step
+            if keyCode == LEFT:
+                x=x-step
+            if keyCode == DOWN:
+                y=y+step        
+            if keyCode == RIGHT:
+                x=x+step 
+    if y<10:
+        q=q+1
+        y=700 
+
+        
+    if y>730 and q >0:
+        q=q-1
+        y=30
+    if x>1350:
+        x=1350
+    if q==0 and y>730:
+        y=730
+    if x<0:
+        x=0
+    '''
+    elif y>768-10 and q == 1:
+        
+    '''
+    if t==0 and q == 0 and v==0:
+        push()
+        rect(90,90,30,30)
+        fill(39,142,0)
+        pop()
+    if x>90 and x<120 and y>90 and y<120 and b==0:
+        d=d+1 
+    if x>90 and x<120 and y>90 and y<120 and b==1 and key=="e":
+        v=1    
+    #if d ==4:
+        #d=d-1
+    frameRate(70)
+    push()
+    fill(255,0,60)
+    rect(1000,650,f,20)
+    pop()
+    if d == 0:
+        f=250
+    if d == 1:
+        f=150
+    if d == 2:
+        f=100
+    if d == 3:
+        f=50
+    if d == 4:
+        f=0 
+    if d >4:
+        text("GAME OVER",20,250)
+        textSize(200)
+    if b==0 and q==0:
+        rect(1000,50,10,30)
+    if x>990 and x<1020 and y>50 and y<80 and key=="e":
+        b=1
+    #text(u"е - использовать",10,150)
+    #textSize(20) 
+    if q == 0:
+        text(u"ЛЕС",20,1000)
+        textSize(100) 
+    if q == 1:
+        rect(0,450,500,20)
+        if x>0 and x<500 and y>450 and y<470:
+            y=700
+            x=384
+        rect(1000,350,500,20)
+        if x>1000 and x<1500 and y>350 and y<370:
+            y=700
+            x=384
+        
