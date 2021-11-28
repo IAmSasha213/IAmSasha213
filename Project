@@ -1,0 +1,49 @@
+import random
+import time
+rand=0
+b = True
+dengi = 0
+life = 2
+SUPER = 0
+print("Кем вы хотите работать?\n1-водитель\n2-кассир\n3-бизнесмен")
+a = int(input())
+while b:
+    if a == 1:
+        rand=random.randint(3, 8)
+        print('Сегодня вы отвезли', rand, "человек. Вы заработали", rand * 100, "рублей!")
+        dengi += rand * 100
+    if a == 2:
+        rand=random.randint(3, 40)
+        print('Сегодня вы обслужили', rand, "человек. Вы заработали", rand * 10, "рублей!")
+        dengi += rand * 10
+    if a == 3:
+        rand=random.randint(0, 1)
+        print('Сегодня вы обслужили', rand, "человек. Вы заработали", rand * 600, "рублей!")
+        dengi += rand * 600
+    print('Вы пришли в магазин. У вас есть', dengi, 'рублей.\n0 - Ничего\n1 - Вода "Акваминерале" = 150 руб\n2 - Хлеб "Супербуханка" = 100 руб\n3 - Лекарство "Спирт от всех болезней" = 350 руб')
+    korzina = int(input('Что будем брать?\n'))
+    if korzina == 123 and dengi >= 600:
+        SUPER += 1
+        if life == 1:
+            life += 1
+        dengi -= 250
+        print('Вы купили жизненно необходимые вещи. На счету ', dengi, '. Завтра будет новый день!')
+    elif korzina == 123 and dengi <600:
+        print("Недостаточно средств.")
+    if korzina == 0:
+        if SUPER == 0:
+            life -= 1
+            print('Вы не поели и не попили. Вам стало хуже.')
+        else:
+            SUPER -=1
+    elif (korzina == 12 or korzina == 21) and dengi >= 250:
+        if life == 1:
+            life += 1
+        dengi -= 250
+    elif korzina == 12 and dengi <250:
+        print("Недостаточно средств.")
+    elif korzina == 3:
+        SUPER = 1
+    if life == 0:
+        print('Вы умерли!')
+        b = False
