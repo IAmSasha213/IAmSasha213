@@ -1,0 +1,22 @@
+parol = input("Введите ваш пароль.")
+d=0
+def Proverkaparola1(str):
+    global d
+    for b in str:
+        if (b>='a' and b<='z') or (b>='A' and b<='Z'):
+            
+            d=d+1
+        else:
+            print("Пароль не содержит букв.")
+def Proverkaparola2(str):
+    global d
+    for b in str:
+        if b in "0123456789":
+            d=d+1
+        else:
+            print("Пароль не содержит цифр.")
+Proverkaparola1(parol)
+Proverkaparola2(parol)
+if d==2:
+    print("Пароль успешно установлен.")
+    
