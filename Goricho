@@ -1,0 +1,35 @@
+import random
+chislo1=random.randint(123,987)
+chislo2=int(input())
+g=0
+def proverka():
+    global chislo1,chislo2,g
+    while g==0:
+        a=int(chislo1/100)  #a
+        m=int(chislo1-a*100) #bc
+        c=int(m%10) #c
+        v=int(m/10) #b
+        
+        q=int(chislo2/100)  #a
+        w=int(chislo2-q*100) #bc
+        e=int(w%10) #c
+        r=int(w/10) #b
+        if a != c and a != v and c != v and q != e and q != r and e != r  :
+            print(chislo1)
+            if a==q and v==r and c==e:
+                print("Ты выйграл!")
+                break
+            elif a==q and v==r or a==q and c==e or v==r and c==e:
+                print("Горячо!")
+                chislo2=int(input())
+            elif a==q or v==r or c==e:
+                print("Тепло!")
+                chislo2=int(input())
+            else:
+                print("Холодно ;(")
+                chislo2=int(input())
+        else:
+            chislo2=int(input())
+proverka()
+    
+
