@@ -1,0 +1,32 @@
+import mylab
+import random
+a=random.randint(1,12)
+b=random.randint(1,12)
+mylab.pole[a][b]="0"
+c=random.randint(1,12)
+d=random.randint(1,12)
+mylab.pole[c][d]="0"
+e=random.randint(1,12)
+f=random.randint(1,12)
+mylab.pole[e][f]="0"
+mylab.vyvodPolya(mylab.vidimost_polya)
+
+
+def proverka(a,b):
+    if a > 12 or b > 12 or a < 1 or b < 1:
+        print("Координаты не верные.")
+        stroka = int(input("Введите номер строки"))
+        stolb = int(input("Введите номер столбца"))
+
+game = True
+while game:
+    stroka = int(input("Введите номер строки"))
+    stolb = int(input("Введите номер столбца"))
+    proverka(stroka,stolb)
+    # передадим не номера строки и столбца, а индексы
+    mylab.check(stroka-1,stolb-1)
+    mylab.vyvodPolya(mylab.vidimost_polya)
+    if mylab.isOpen():
+        game = False
+
+print("Всё поле открыто!")
