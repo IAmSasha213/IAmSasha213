@@ -71,5 +71,13 @@ def isOpen():
             # значит неправда, поле ещё не всё открыто
             opened = False
     return opened
-
+def minaproverka(stroka, stolb):
+    for stroka in range(len(vidimost_polya)):
+        for stolb in range(len(vidimost_polya)):
+            if pole[stroka][stolb] == "0":
+                vyvodPolya(vidimost_polya)
+                print("GAME OVER")
+                exit()
+def lhl():
+    print(len(pole))
 
