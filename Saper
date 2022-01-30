@@ -3,19 +3,19 @@ import random
 while True:
     a=random.randint(1,11)
     b=random.randint(1,11)
-    mylab.pole[a][b]="0"
+    mylab.pole[a][b]="&"
     c=random.randint(1,11)
     d=random.randint(1,11)
-    mylab.pole[c][d]="0"
+    mylab.pole[c][d]="&"
     e=random.randint(1,11)
     f=random.randint(1,11)
-    mylab.pole[e][f]="0"
+    mylab.pole[e][f]="&"
     mylab.vyvodPolya(mylab.vidimost_polya)
     if a != c and b != c or a != e and b != f or c != e and d != f:
         break
     if a == c and b == c or a == e and b == f or c == e and d == f:
         print("Загрузка...")
-
+mylab.vyvodPolya(mylab.pole)
 
 def proverka(a,b):
     if a > 12 or b > 12 or a < 1 or b < 1:
@@ -28,7 +28,7 @@ while game:
     stroka = int(input("Введите номер строки"))
     stolb = int(input("Введите номер столбца"))
     proverka(stroka,stolb)
-    mylab.minaproverka(stroka, stolb)
+    mylab.minaproverka(stroka-1, stolb-1)
     # передадим не номера строки и столбца, а индексы
     mylab.check(stroka-1,stolb-1)
     mylab.vyvodPolya(mylab.vidimost_polya)
