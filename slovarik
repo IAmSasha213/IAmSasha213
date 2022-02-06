@@ -1,0 +1,16 @@
+dnevnik={"Ima":"Krosh","Familia":"Davidov","Ochestvo":"Romanovich","matem":"5","liter":"4","rysskiy":"4"}
+def printe():
+    print(dnevnik)
+def izmena1():
+    print("первое это раздел а второе изменение")
+    r=input()
+    f=input()
+    dnevnik[r]=f
+def izmena2():
+    print("напиши название раздела(первое это название раздела а второе свойство)")
+    e=input()
+    g=input()
+    dnevnik[e] = g
+def minus():
+    j=input()
+    dnevnik.pop(j)
