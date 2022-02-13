@@ -1,0 +1,28 @@
+class Student:
+    def __init__(self,f,i,n,y):
+        self.familia=f
+        self.iniciali=i
+        self.nomer=n
+        self.yspevaemost=y
+        
+stud=Student("Dima,G,12,5/5")
+stud1=Student("Aleg,H,12,4/5")
+stud2=Student("Aleksey,J,11,5/5")
+stud3=Student("Dasha,R,10,5/5")
+stud4=Student("Sasha,T,12,1/5")
+stud5=Student("Den,Y,11,5/5")
+stud6=Student("Kiril,U,13,3/5")
+stud7=Student("Vika,I,16,5/5")
+stud8=Student("Gelya,O,15,4/5")
+stud9=Student("Katya,P,16,3/5")
+spisok=[]
+spisok.append(stud)
+spisok.append(stud1)
+spisok.append(stud2)
+spisok.append(stud3)
+spisok.append(stud4)
+spisok.append(stud5)
+spisok.append(stud6)
+spisok.append(stud7)
+spisok.append(stud8)
+spisok.append(stud9)
