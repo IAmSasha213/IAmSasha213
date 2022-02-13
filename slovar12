@@ -1,0 +1,49 @@
+slovar={'login':'0','parol':'0'}
+akaynt="False"
+def register():
+    global akaynt
+    if akaynt=="False":
+        print("введите имя пользователя")
+        j=input()
+        slovar["login"]=j
+        while True:
+            print("Придумайте пароль")
+            f=input()
+            print("Напишите пароль ещё 1 раз")
+            e=input()
+            if e == f:
+                print("Хорошо")
+                break
+            else:
+                print("неправильно напишите пароль снова")
+        slovar["parol"] = f
+        print(slovar)
+    else:
+        print("Вы в акаунте")
+def login():
+    global akaynt
+    if akaynt=="False":
+        while True:
+            print("Напишите логин")
+            h=input()
+            if h == slovar["login"]:
+                print("Хорошо")
+                break
+            else:
+                print("Такого логина нет")
+        while True:
+            print("Напишите пароль")
+            g=input()
+            if g==slovar["parol"]:
+                print("вы успешно вошли в акаунт")
+                break
+    elif akaynt =="True":
+        print("Пароль не правильный")
+        akaynt="True"
+    else:
+        print("Вы в акаунте")
+def vihod():
+    global akaynt
+    print("Вы вышли из акаунта")
+    akaynt="False"
+        
