@@ -1,0 +1,5 @@
+class Train:
+    def __init__(self,n,nom,v):
+        self.nazvanie=f
+        self.nomer=i
+        self.vrema=n
