@@ -1,0 +1,67 @@
+class Student:
+    def __init__(self,f,i,n,y):
+        self.familia=f
+        self.iniciali=i
+        self.nomer=n
+        self.yspevaemost=y
+        
+    def info(self):
+        f=open("file.txt",'a')
+        f.write(" "+self.familia)
+        f.write(" "+self.iniciali)
+        f.write(" "+self.nomer)
+        f.write(" "+self.yspevaemost)
+        f.write('\n')
+        f.close()
+def plus():
+    f=open("file.txt",'w')
+    f.write('')
+    f.close()
+    pp=input()
+    rr=input()
+    hh=input()
+    gg=input()
+    stud10=Student(pp,rr,hh,gg)
+    spisok.append(stud10)
+    for i in range (len(spisok)):
+        spisok[i].info()
+def delete():
+    f=open("file.txt",'w')
+    f.write('')
+    f.close()
+    print("кого вы хотите удалить?")
+    i=int(input())
+    spisok.pop(i)
+    for i in range (len(spisok)):
+        spisok[i].info()
+def edit():
+    f=open("file.txt",'w')
+    f.write('')
+    f.close()
+    print("кого вы хотите отредактировать?")
+    i=int(input())
+    print(spisok(i))
+    
+stud=Student("Dim","Gogolik",'12','4.0')
+stud1=Student("Aleg","Hetorik",'12','4.0')
+stud2=Student("Aleksey","Dubovskiy",'11','5.0')
+stud3=Student("Dasha","Rockiy",'10','4.5')
+stud4=Student("Sasha","Toguriy",'12','1.0')
+stud5=Student("Den","Ykohyh",'11','5.0')
+stud6=Student("Kiril","Udologiy",'13','3.0')
+stud7=Student("Vika","Likhotvorik",'16','5.0')
+stud8=Student("Gelya","Oksaniy",'15','4.0')
+stud9=Student("Katya","Pipka",'16','3.0')
+spisok=[]
+spisok.append(stud)
+spisok.append(stud1)
+spisok.append(stud2)
+spisok.append(stud3)
+spisok.append(stud4)
+spisok.append(stud5)
+spisok.append(stud6)
+spisok.append(stud7)
+spisok.append(stud8)
+spisok.append(stud9)
+for i in range (len(spisok)):
+    spisok[i].info()
