@@ -1,0 +1,22 @@
+f=open("file.txt",'a')
+def reg():
+    global f
+    print("Логин и пароль")
+    log=input()
+    pas=input()
+    m=(log+" "+pas)
+    f.write(log+" "+pas)
+    f.close()
+def log():
+    h=open("file.txt",'r')
+    text=h.readline()
+    print("Напишите ваш логин и пароль")
+    d=input()
+    j=input()
+    r=(d+" "+j)
+    if text == r:
+        print("Вы вошли!")
+    else:
+        print("не удалось или такой учётной записи нет.")
+    f.close()
+
