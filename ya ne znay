@@ -1,0 +1,24 @@
+spisok=[]
+while True:
+    f=open("fitnes.txt",'r')
+    r=f.readline()
+    print(r)
+    f.close()
+    print("Напиши(plus)если хочешь добавить дело, напиши(minus) чтобы удалить и (sdelano) чтобы пометить")
+    g=input()
+    if g == "plus":
+        f=open("fitnes.txt",'a')
+        lol=input()
+        spisok.append(lol)
+        f.write(lol+"\n")
+        f.close()
+    elif g == "minus":
+        f=open("fitnes.txt",'w')
+        print("напиши номер дела чтобы его удалить")
+        k=int(input())
+        spisok.pop(k)
+        for i in range (len(spisok)):
+            f.write(spisok[i])
+        f.close()
+        
+
