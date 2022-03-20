@@ -1,0 +1,17 @@
+f=open("file.txt",'r')
+read=f.readlines()
+spisok=[read]
+def plus():
+    global spisok
+    f=open("file.txt",'w')
+    f.write('')
+    f.close()
+    gg=input()
+    f=open("file.txt",'a')
+    f.write(gg)
+    spisok=spisok+[gg]
+#def delete():
+    
+
+#+def edit():
+    
