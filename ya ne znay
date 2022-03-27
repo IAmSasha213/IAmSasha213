@@ -1,24 +1,138 @@
-spisok=[]
+h=0
+ss=1
+df=''
+hj=''
+nn=''
+bb=''
+fv=''
 while True:
     f=open("fitnes.txt",'r')
     r=f.readline()
     print(r)
     f.close()
-    print("Напиши(plus)если хочешь добавить дело, напиши(minus) чтобы удалить и (sdelano) чтобы пометить")
+    print("Напиши(plus)если хочешь добавить дело (максимум 5 страниц), напиши(minus) чтобы удалить и (edit) чтобы изменить, чтобы перелеснуть страницу вперёд напишите(next) а назад (past)")
     g=input()
     if g == "plus":
-        f=open("fitnes.txt",'a')
-        lol=input()
-        spisok.append(lol)
-        f.write(lol+"\n")
-        f.close()
+        if h == 0:
+            f=open("fitnes.txt",'w')
+            lol=input()
+            df=lol
+            f.write(lol)
+            f.close()
+            h=h+1
+        elif h == 1:
+            f=open("fitnes.txt",'w')
+            lol=input()
+            hj=lol
+            f.write(lol)
+            f.close()
+            h=h+1
+        elif h == 2:
+            f=open("fitnes.txt",'w')
+            lol=input()
+            nn=lol
+            f.write(lol)
+            f.close()
+            h=h+1
+        elif h == 3:
+            f=open("fitnes.txt",'w')
+            lol=input()
+            bb=lol
+            f.write(lol)
+            f.close()
+            h=h+1
+        elif h == 4:
+            f=open("fitnes.txt",'w')
+            lol=input()
+            fv=lol
+            f.write(lol)
+            f.close()
+            h=h+1
     elif g == "minus":
         f=open("fitnes.txt",'w')
-        print("напиши номер дела чтобы его удалить")
+        print("напиши номер страницы чтобы её удалить")
         k=int(input())
-        spisok.pop(k)
-        for i in range (len(spisok)):
-            f.write(spisok[i])
-        f.close()
+        if k == 0:
+            df=''
+        elif k == 1:
+            hj=''
+        elif k==2:
+            nn=''
+        elif k==3:
+            bb=''
+        elif k==4:
+            fv=''
+    elif g == "next":
+        if ss==0:
+            f=open("fitnes.txt",'w')
+            f.write(df)
+            ss=ss+1
+        elif ss==1:
+            f=open("fitnes.txt",'w')
+            f.write(hj)
+            ss=ss+1
+        elif ss==2:
+            f=open("fitnes.txt",'w')
+            f.write(nn)
+            ss=ss+1
+        elif ss==3:
+            f=open("fitnes.txt",'w')
+            f.write(bb)
+            ss=ss+1
+        elif ss==4:
+            f=open("fitnes.txt",'w')
+            f.write(fv)
+            ss=ss+1
+        elif ss==5:
+            ss=4
+            print("последняя страница")
+    elif g == "past":
+        if ss==0:
+            print("это последняя страница")
+        elif ss==1:
+            f=open("fitnes.txt",'w')
+            f.write(df)
+            ss=ss-1
+        elif ss==2:
+            f=open("fitnes.txt",'w')
+            f.write(hj)
+            ss=ss-1
+        elif ss==3:
+            f=open("fitnes.txt",'w')
+            f.write(nn)
+            ss=ss-1
+        elif ss==4:
+            f=open("fitnes.txt",'w')
+            f.write(bb)
+            ss=ss-1
+    elif g == "edit":
+        print("напишите номер страницы которую вы хотите изменить")
+        p=int(input())
+        if p == 0:
+            print(df)
+            print("скопируйте эту страницу и измените её как вы хотите.")
+            jj=input()
+            df=jj
+        elif p == 1:
+            print(hj)
+            print("скопируйте эту страницу и измените её как вы хотите.")
+            jj=input()
+            hj=jj
+        elif p==2:
+            print(nn)
+            print("скопируйте эту страницу и измените её как вы хотите.")
+            jj=input()
+            nn=jj
+        elif p==3:
+            print(bb)
+            print("скопируйте эту страницу и измените её как вы хотите.")
+            jj=input()
+            bb=jj
+        elif p==4:
+            print(fv)
+            print("скопируйте эту страницу и измените её как вы хотите.")
+            jj=input()
+            fv=jj
+    
+    
         
-
