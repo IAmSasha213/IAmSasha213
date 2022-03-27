@@ -1,50 +1,50 @@
 h=0
 ss=1
-df=''
-hj=''
-nn=''
-bb=''
-fv=''
+list1=''
+list2=''
+list3=''
+list4=''
+list5=''
+print("Напиши(plus)если хочешь добавить дело (максимум 5 страниц), напиши(minus) чтобы удалить и (edit) чтобы изменить, чтобы перелеснуть страницу вперёд напишите(next) а назад (past) и (help) для просмотра комманд")
 while True:
     f=open("fitnes.txt",'r')
     r=f.readline()
     print(r)
     f.close()
-    print("Напиши(plus)если хочешь добавить дело (максимум 5 страниц), напиши(minus) чтобы удалить и (edit) чтобы изменить, чтобы перелеснуть страницу вперёд напишите(next) а назад (past)")
     g=input()
     if g == "plus":
         if h == 0:
             f=open("fitnes.txt",'w')
             lol=input()
-            df=lol
+            list1=lol
             f.write(lol)
             f.close()
             h=h+1
         elif h == 1:
             f=open("fitnes.txt",'w')
             lol=input()
-            hj=lol
+            list2=lol
             f.write(lol)
             f.close()
             h=h+1
         elif h == 2:
             f=open("fitnes.txt",'w')
             lol=input()
-            nn=lol
+            list3=lol
             f.write(lol)
             f.close()
             h=h+1
         elif h == 3:
             f=open("fitnes.txt",'w')
             lol=input()
-            bb=lol
+            list4=lol
             f.write(lol)
             f.close()
             h=h+1
         elif h == 4:
             f=open("fitnes.txt",'w')
             lol=input()
-            fv=lol
+            list5=lol
             f.write(lol)
             f.close()
             h=h+1
@@ -53,86 +53,81 @@ while True:
         print("напиши номер страницы чтобы её удалить")
         k=int(input())
         if k == 0:
-            df=''
+            list1=''
         elif k == 1:
-            hj=''
+            list2=''
         elif k==2:
-            nn=''
+            list3=''
         elif k==3:
-            bb=''
+            list4=''
         elif k==4:
-            fv=''
+            list5=''
     elif g == "next":
+        print("если ничего не произошло то напишите комманду ещё 1 раз")
+        f=open("fitnes.txt",'w')
         if ss==0:
-            f=open("fitnes.txt",'w')
-            f.write(df)
+            f.write(list1)
             ss=ss+1
         elif ss==1:
-            f=open("fitnes.txt",'w')
-            f.write(hj)
+            f.write(list2)
             ss=ss+1
         elif ss==2:
-            f=open("fitnes.txt",'w')
-            f.write(nn)
+            f.write(list3)
             ss=ss+1
         elif ss==3:
-            f=open("fitnes.txt",'w')
-            f.write(bb)
+            f.write(list4)
             ss=ss+1
         elif ss==4:
-            f=open("fitnes.txt",'w')
-            f.write(fv)
+            f.write(list5)
             ss=ss+1
         elif ss==5:
             ss=4
             print("последняя страница")
     elif g == "past":
+        print("если ничего не произошло то напишите комманду ещё 1 раз")
+        f=open("fitnes.txt",'w')
         if ss==0:
             print("это последняя страница")
+            f.write(list1)
         elif ss==1:
-            f=open("fitnes.txt",'w')
-            f.write(df)
+            f.write(list1)
             ss=ss-1
         elif ss==2:
-            f=open("fitnes.txt",'w')
-            f.write(hj)
+            f.write(list2)
             ss=ss-1
         elif ss==3:
-            f=open("fitnes.txt",'w')
-            f.write(nn)
+            f.write(list3)
             ss=ss-1
         elif ss==4:
-            f=open("fitnes.txt",'w')
-            f.write(bb)
+            f.write(list4)
             ss=ss-1
     elif g == "edit":
         print("напишите номер страницы которую вы хотите изменить")
         p=int(input())
         if p == 0:
-            print(df)
+            print(list1)
             print("скопируйте эту страницу и измените её как вы хотите.")
             jj=input()
-            df=jj
+            list1=jj
         elif p == 1:
-            print(hj)
+            print(list2)
             print("скопируйте эту страницу и измените её как вы хотите.")
             jj=input()
-            hj=jj
+            list2=jj
         elif p==2:
-            print(nn)
+            print(list3)
             print("скопируйте эту страницу и измените её как вы хотите.")
             jj=input()
-            nn=jj
+            list3=jj
         elif p==3:
-            print(bb)
+            print(list4)
             print("скопируйте эту страницу и измените её как вы хотите.")
             jj=input()
-            bb=jj
+            list4=jj
         elif p==4:
-            print(fv)
+            print(list5)
             print("скопируйте эту страницу и измените её как вы хотите.")
             jj=input()
-            fv=jj
-    
-    
-        
+            list5=jj
+    elif g=='help':
+        print("Напиши(plus)если хочешь добавить дело (максимум 5 страниц), напиши(min
