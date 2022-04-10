@@ -1,0 +1,20 @@
+from tkinter import *
+from tkinter.ttk import Combobox
+import random
+f=0
+def jmak():
+    f=random.randint(0,1)
+    print(f)
+    
+window = Tk()
+window.title("Wellllllll")
+window.geometry("450x450")
+lbl=Label(window, text="hahahaNO")
+lbl.pack()
+bnt=Button(window, text='hh',command=jmak)
+bnt.pack()
+window.mainloop()
+combo= Combobox(window)
+combo['values']=(1,2,3,4,5,"Текст")
+combo.current(0)
+combo.pack()
