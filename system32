@@ -1,0 +1,12 @@
+import os
+import pyautogui
+import time
+print("имя проги??")
+gg=input()
+os.system('C:/Windows/System32/explorer.exe')
+time.sleep(0.2)
+pyautogui.hotkey('ctrl','f')
+time.sleep(0.2)
+pyautogui.write(gg)
+time.sleep(0.2)
+pyautogui.press("enter")
