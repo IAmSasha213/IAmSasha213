@@ -1,0 +1,23 @@
+from tkinter import*
+window = Tk() 
+window.title("Добро пожаловать в приложение")
+window.geometry('400x250')
+def ajmyak():
+    lbl.configure(text = "Жёлтого",bg='yellow')
+def bjmyak():
+    lbl.configure(text = "оранжевого",bg='orange')
+def cjmyak():
+    lbl.configure(text = "голубого",bg='lightblue')
+def djmyak():
+    lbl.configure(text = "светлозелного",bg='lightgreen')
+btn1 = Button(bg='yellow', command=ajmyak).place(x=50, y=15)
+btn2 = Button(bg='orange', command=bjmyak).place(x=50, y=45) 
+btn3 = Button(bg='lightblue', command=cjmyak).place(x=50, y=75) 
+btn4 = Button(bg='lightgreen', command=djmyak).place(x=50, y=105)
+#bnt1.pack()
+#bnt2.pack()
+#bnt3.pack()
+#bnt4.pack()
+lbl = Label(window, text="1")
+lbl.pack()
+window.mainloop()
