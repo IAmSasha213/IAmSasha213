@@ -1,0 +1,22 @@
+from tkinter import *   
+h=[]
+g=''
+window = Tk() 
+window.title("Добро пожаловать в приложение")
+window.geometry('400x250')
+def jmyak():
+    g=ent.get()
+    h.append(g)
+def ljmyak():
+    global h
+    print(h)
+lbl = Label(window, text="Твоё имя")
+lbl.pack()
+ent = Entry(window, width=10)
+ent.focus()
+ent.pack()
+btn = Button(bg='yellow', command=jmyak, width=10)
+btn.pack()
+btn = Button(bg='yellow', command=ljmyak, width=10)
+btn.pack()
+window.mainloop()
