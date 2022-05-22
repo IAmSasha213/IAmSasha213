@@ -1,3 +1,4 @@
+#Саша Лихотворик
 from tkinter import *   
 g=1
 t=1
