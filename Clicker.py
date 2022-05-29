@@ -28,7 +28,7 @@ def jmyak2():
     if g==10000 or g>10000:
         canvas.delete("all")
         canvas.create_rectangle(-10,-10,1000,1000,fill="white",outline="black")
-        t=100
+        t=1000
         g=g-10000
         lbl1.configure(text = '{}$'.format(g))
         lbl2.configure(text = '{} за 1 клик$'.format(t))
